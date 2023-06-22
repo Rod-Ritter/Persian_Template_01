@@ -1,0 +1,243 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Vazirmatn, sans-serif;
+  background: #f0eeee;
+}
+
+ul li {
+  list-style: none;
+}
+
+a {
+  color: #333;
+  text-decoration: none;
+}
+
+a:visited {
+  color: #666;
+  text-decoration: none;
+}
+
+.hover-underline-animation {
+  display: inline-block;
+  position: relative;
+  color: #0087ca;
+}
+
+.hover-underline-animation::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 1px;
+  bottom: 0;
+  left: 0;
+  background-color: #666;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.hover-underline-animation:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+h1, h2 {
+  color: #333;
+}
+
+p {
+  color: #777;
+}
+
+header {
+  background: #fff;
+}
+
+.header-wrapper {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  background: #fff;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+}
+
+.nav-left {
+  flex: 3;
+}
+
+.nav-right {
+  flex: 3;
+}
+
+.nav-left ul {
+  display: flex;
+  justify-content: space-around;
+  font-size: 1.2rem;
+}
+
+.nav-right ul {
+  display: flex;
+  justify-content: space-around;
+  font-size: 1.2rem;
+
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+  flex: 1;
+  padding: 0 10rem;
+}
+
+.logo-grow {
+  transition: all .2s ease-in-out; 
+}
+
+.logo-grow:hover {
+  transform: scale(1.1); 
+}
+
+.logo img {
+  width: 100%;
+}
+
+.line-up {
+  border: 0.1px solid rgb(135, 197, 140);
+}
+
+.main-container-wrapper {
+  max-width: 1100px;
+  margin: 2rem auto;
+  padding: 0rem 2rem;
+  background: #fff;
+}
+
+.main-container {
+  display: flex;
+}
+
+.menu {
+  margin-right: 2rem;
+
+}
+
+.menu > h1 {
+  padding: 1.5rem 0rem;
+  font-size: 2.4rem;
+}
+
+.menu > p {
+  padding: 1rem 0rem;
+}
+
+.menu {
+  flex: 3;
+}
+
+.sidebar {
+  flex: 1;
+}
+
+.item-sidebar-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 2rem;
+  padding: 8rem 0 2rem 0;
+}
+
+.item-sidebar {
+  display: flex;
+  flex-flow: column nowrap;
+  padding: 1rem 1rem;
+  text-align: center;
+  box-shadow: 8px 4px 22px -4px rgba(0,0,0,0.71);
+}
+
+.item-sidebar > h2 {
+  padding: 1rem 0;
+}
+
+.item-sidebar img {
+  width: 100%;
+}
+
+.item-sidebar > p {
+  padding: 1rem 0;
+}
+
+.food-container {
+  margin-top: 3rem;
+}
+
+.food-container > h1 {
+  margin-bottom: 4rem;
+}
+
+.food-item-text > h2 {
+  padding: 0.5rem 0;
+}
+
+.food-item-text > p {
+  padding-bottom: 1rem;
+}
+
+.food-item {
+  display: flex;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+  margin: 1rem 0;
+}
+
+.food-item-text {
+ display: flex;
+ flex-direction: column;
+ flex: 4;
+ margin-right: 1rem;
+}
+
+.food-item-img1 {
+  padding: 0.5rem 0;
+  flex: 1.5;
+  background: url("https://assets.afcdn.com/recipe/20191214/104213_w1024h1024c1cx468cy300.jpg")center center/cover;
+}
+
+.food-item-img2 {
+  padding: 0.5rem 0;
+  flex: 1.5;
+  background: url("https://upload.wikimedia.org/wikipedia/commons/9/93/Screenshot_%DB%B2%DB%B0%DB%B2%DB%B1%DB%B0%DB%B8%DB%B1%DB%B1-%DB%B0%DB%B4%DB%B5%DB%B2%DB%B3%DB%B9_Instagram.jpg")center center/cover;
+}
+
+.food-item-img3 {
+  padding: 0.5rem 0;
+  flex: 1.5;
+  background: url("https://blog.iranroute.com/wp-content/uploads/2019/07/Ghormeh-Sabzi-8-e1563171294127-750x650.jpg")center center/cover;
+}
+
+
+
+@media (max-width:1040px) {
+  .food-item-text {
+    flex: 3;
+  }
+
+  .food-item-img1 .food-item-img2 .food-item-img3 {
+    flex: 2;
+  }
+}
+
+
+
+
